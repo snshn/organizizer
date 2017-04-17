@@ -1,0 +1,31 @@
+<head>
+  <title>Dirt Puzzle</title>
+  <link rel="icon" href="/favicon.png" />
+</head>
+
+<body>
+  {{> box}}
+</body>
+
+<template name="box">
+  {{#if _id}}
+    <div class="{{#if done}}done{{/if}}">
+      <a class="v"><i class="fa fa-{{#if done}}check-circle-o{{else}}circle-o{{/if}}"></i></a>
+      <h1>
+        <span>{{name}}</span>
+      </h1>
+      <a class="x"><i class="fa fa-trash"></i></a>
+      {{#each tasks}}{{> box}}{{/each}}
+      {{> box_new}}
+    </div>
+  {{else}}
+    {{#each tasks}}{{> box}}{{/each}}
+    {{> box_new}}
+  {{/if}}
+</template>
+
+<template name="box_new">
+  <form>
+    <input type="text" name="name" placeholder="Add new {{#if _id}}item{{else}}project{{/if}}" required />
+  </form>
+</template>

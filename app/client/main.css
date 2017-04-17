@@ -1,0 +1,104 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: table;
+    width: 100%;
+    margin:0;
+    font-family: Arial;
+    font-size: 11px;
+    cursor: default;
+    background: #FFF;
+}
+
+div,
+body > form {
+    padding: 10px 5px;
+}
+
+body > div,
+body > form {
+    display: table-cell;
+    padding-bottom: 100px;
+    min-width: 160px;
+    border: none;
+}
+
+div,
+form {
+    background: #FFF;
+}
+
+body > div:nth-child(even) {
+    background: #FFF;
+}
+body > div:nth-child(odd) {
+    background: #EEE;
+}
+
+body > form {
+    background: #444;
+}
+
+div {
+    position: relative;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+div div {
+    border: 1px solid #000;
+    box-shadow: 1px 1px 9px rgba(90,90,90,.4);
+}
+
+.v, .x {
+    position: absolute;
+    top: 2px;
+}
+.v {
+    color: green;
+    left: 2px;
+}
+.x {
+    color: #C00;
+    right: 3px;
+}
+
+h1 {
+    margin: 8px 0 8px 0;
+    font-size: 100%;
+}
+
+span {
+    cursor: text;
+}
+
+a {
+    cursor: pointer;
+}
+
+input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 100%;
+    padding: 0 2px;
+}
+
+.done {
+    color: #FFF;
+    background: #000;
+}
+.done > h1 > span {
+    text-decoration: line-through;
+}
+
+div:hover {
+    background: #DDD;
+}
+.dragging div:hover {
+    cursor: move;
+    background: pink;
+}
